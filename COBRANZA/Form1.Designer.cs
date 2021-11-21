@@ -29,11 +29,14 @@ namespace COBRANZA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmprincipal));
             this.tabmenuprincipal = new MaterialSkin.Controls.MaterialTabControl();
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.tabSelectorClientes = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabOpcClientes = new MaterialSkin.Controls.MaterialTabControl();
             this.tabClientesRegistro = new System.Windows.Forms.TabPage();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.tabClientesConsulta = new System.Windows.Forms.TabPage();
             this.tabServicios = new System.Windows.Forms.TabPage();
             this.tabSelectorServicios = new MaterialSkin.Controls.MaterialTabSelector();
@@ -54,7 +57,8 @@ namespace COBRANZA
             this.tabConfiguracionesAccesos = new System.Windows.Forms.TabPage();
             this.tabConfiguracionesModulos = new System.Windows.Forms.TabPage();
             this.tabConfiguracionesParametros = new System.Windows.Forms.TabPage();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.imglistmenuprincipal = new System.Windows.Forms.ImageList(this.components);
+            this.mnustripmenuprincipal = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,13 +78,14 @@ namespace COBRANZA
             this.tabmenuprincipal.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabOpcClientes.SuspendLayout();
+            this.tabClientesRegistro.SuspendLayout();
             this.tabServicios.SuspendLayout();
             this.tabOpcServicios.SuspendLayout();
             this.tabMorosidad.SuspendLayout();
             this.tabOpcMorosidad.SuspendLayout();
             this.tabConfiguraciones.SuspendLayout();
             this.tabOpcConfiguraciones.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.mnustripmenuprincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabmenuprincipal
@@ -91,23 +96,24 @@ namespace COBRANZA
             this.tabmenuprincipal.Controls.Add(this.tabConfiguraciones);
             this.tabmenuprincipal.Depth = 0;
             this.tabmenuprincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabmenuprincipal.ImageList = this.imglistmenuprincipal;
             this.tabmenuprincipal.Location = new System.Drawing.Point(3, 88);
             this.tabmenuprincipal.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabmenuprincipal.Multiline = true;
             this.tabmenuprincipal.Name = "tabmenuprincipal";
             this.tabmenuprincipal.SelectedIndex = 0;
-            this.tabmenuprincipal.Size = new System.Drawing.Size(899, 486);
+            this.tabmenuprincipal.Size = new System.Drawing.Size(951, 499);
             this.tabmenuprincipal.TabIndex = 0;
             // 
             // tabClientes
             // 
             this.tabClientes.Controls.Add(this.tabSelectorClientes);
             this.tabClientes.Controls.Add(this.tabOpcClientes);
-            this.tabClientes.ImageKey = "User.png";
-            this.tabClientes.Location = new System.Drawing.Point(4, 22);
+            this.tabClientes.ImageIndex = 4;
+            this.tabClientes.Location = new System.Drawing.Point(4, 23);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientes.Size = new System.Drawing.Size(891, 460);
+            this.tabClientes.Size = new System.Drawing.Size(943, 472);
             this.tabClientes.TabIndex = 0;
             this.tabClientes.Text = "Clientes";
             this.tabClientes.UseVisualStyleBackColor = true;
@@ -122,7 +128,7 @@ namespace COBRANZA
             this.tabSelectorClientes.Location = new System.Drawing.Point(-4, 0);
             this.tabSelectorClientes.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabSelectorClientes.Name = "tabSelectorClientes";
-            this.tabSelectorClientes.Size = new System.Drawing.Size(899, 48);
+            this.tabSelectorClientes.Size = new System.Drawing.Size(951, 48);
             this.tabSelectorClientes.TabIndex = 1;
             this.tabSelectorClientes.Text = "materialTabSelector1";
             // 
@@ -139,25 +145,39 @@ namespace COBRANZA
             this.tabOpcClientes.Multiline = true;
             this.tabOpcClientes.Name = "tabOpcClientes";
             this.tabOpcClientes.SelectedIndex = 0;
-            this.tabOpcClientes.Size = new System.Drawing.Size(885, 405);
+            this.tabOpcClientes.Size = new System.Drawing.Size(937, 417);
             this.tabOpcClientes.TabIndex = 0;
             // 
             // tabClientesRegistro
             // 
+            this.tabClientesRegistro.Controls.Add(this.materialCard1);
             this.tabClientesRegistro.Location = new System.Drawing.Point(4, 22);
             this.tabClientesRegistro.Name = "tabClientesRegistro";
             this.tabClientesRegistro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientesRegistro.Size = new System.Drawing.Size(877, 379);
+            this.tabClientesRegistro.Size = new System.Drawing.Size(929, 391);
             this.tabClientesRegistro.TabIndex = 0;
             this.tabClientesRegistro.Text = "Registro";
             this.tabClientesRegistro.UseVisualStyleBackColor = true;
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(17, 17);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(895, 347);
+            this.materialCard1.TabIndex = 0;
             // 
             // tabClientesConsulta
             // 
             this.tabClientesConsulta.Location = new System.Drawing.Point(4, 22);
             this.tabClientesConsulta.Name = "tabClientesConsulta";
             this.tabClientesConsulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientesConsulta.Size = new System.Drawing.Size(772, 252);
+            this.tabClientesConsulta.Size = new System.Drawing.Size(929, 391);
             this.tabClientesConsulta.TabIndex = 1;
             this.tabClientesConsulta.Text = "Consulta";
             this.tabClientesConsulta.UseVisualStyleBackColor = true;
@@ -166,11 +186,11 @@ namespace COBRANZA
             // 
             this.tabServicios.Controls.Add(this.tabSelectorServicios);
             this.tabServicios.Controls.Add(this.tabOpcServicios);
-            this.tabServicios.ImageKey = "services.png";
-            this.tabServicios.Location = new System.Drawing.Point(4, 22);
+            this.tabServicios.ImageIndex = 3;
+            this.tabServicios.Location = new System.Drawing.Point(4, 23);
             this.tabServicios.Name = "tabServicios";
             this.tabServicios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServicios.Size = new System.Drawing.Size(786, 333);
+            this.tabServicios.Size = new System.Drawing.Size(943, 472);
             this.tabServicios.TabIndex = 1;
             this.tabServicios.Text = "Servicios";
             this.tabServicios.UseVisualStyleBackColor = true;
@@ -185,7 +205,7 @@ namespace COBRANZA
             this.tabSelectorServicios.Location = new System.Drawing.Point(-4, 0);
             this.tabSelectorServicios.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabSelectorServicios.Name = "tabSelectorServicios";
-            this.tabSelectorServicios.Size = new System.Drawing.Size(794, 48);
+            this.tabSelectorServicios.Size = new System.Drawing.Size(846, 48);
             this.tabSelectorServicios.TabIndex = 3;
             this.tabSelectorServicios.Text = "materialTabSelector1";
             // 
@@ -203,7 +223,7 @@ namespace COBRANZA
             this.tabOpcServicios.Multiline = true;
             this.tabOpcServicios.Name = "tabOpcServicios";
             this.tabOpcServicios.SelectedIndex = 0;
-            this.tabOpcServicios.Size = new System.Drawing.Size(780, 278);
+            this.tabOpcServicios.Size = new System.Drawing.Size(832, 290);
             this.tabOpcServicios.TabIndex = 2;
             // 
             // tabServiciosRegistro
@@ -211,7 +231,7 @@ namespace COBRANZA
             this.tabServiciosRegistro.Location = new System.Drawing.Point(4, 22);
             this.tabServiciosRegistro.Name = "tabServiciosRegistro";
             this.tabServiciosRegistro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServiciosRegistro.Size = new System.Drawing.Size(772, 252);
+            this.tabServiciosRegistro.Size = new System.Drawing.Size(824, 264);
             this.tabServiciosRegistro.TabIndex = 0;
             this.tabServiciosRegistro.Text = "Registro";
             this.tabServiciosRegistro.UseVisualStyleBackColor = true;
@@ -221,7 +241,7 @@ namespace COBRANZA
             this.tabServicioConsulta.Location = new System.Drawing.Point(4, 22);
             this.tabServicioConsulta.Name = "tabServicioConsulta";
             this.tabServicioConsulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServicioConsulta.Size = new System.Drawing.Size(772, 252);
+            this.tabServicioConsulta.Size = new System.Drawing.Size(824, 264);
             this.tabServicioConsulta.TabIndex = 1;
             this.tabServicioConsulta.Text = "Consulta";
             this.tabServicioConsulta.UseVisualStyleBackColor = true;
@@ -230,7 +250,7 @@ namespace COBRANZA
             // 
             this.tabServiciosPrecio.Location = new System.Drawing.Point(4, 22);
             this.tabServiciosPrecio.Name = "tabServiciosPrecio";
-            this.tabServiciosPrecio.Size = new System.Drawing.Size(772, 252);
+            this.tabServiciosPrecio.Size = new System.Drawing.Size(824, 264);
             this.tabServiciosPrecio.TabIndex = 2;
             this.tabServiciosPrecio.Text = "Precio";
             this.tabServiciosPrecio.UseVisualStyleBackColor = true;
@@ -239,10 +259,10 @@ namespace COBRANZA
             // 
             this.tabMorosidad.Controls.Add(this.tabSelectorMorocidad);
             this.tabMorosidad.Controls.Add(this.tabOpcMorosidad);
-            this.tabMorosidad.ImageKey = "mora.png";
-            this.tabMorosidad.Location = new System.Drawing.Point(4, 22);
+            this.tabMorosidad.ImageIndex = 2;
+            this.tabMorosidad.Location = new System.Drawing.Point(4, 23);
             this.tabMorosidad.Name = "tabMorosidad";
-            this.tabMorosidad.Size = new System.Drawing.Size(786, 333);
+            this.tabMorosidad.Size = new System.Drawing.Size(943, 472);
             this.tabMorosidad.TabIndex = 2;
             this.tabMorosidad.Text = "Morosidad";
             this.tabMorosidad.UseVisualStyleBackColor = true;
@@ -257,7 +277,7 @@ namespace COBRANZA
             this.tabSelectorMorocidad.Location = new System.Drawing.Point(-4, 0);
             this.tabSelectorMorocidad.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabSelectorMorocidad.Name = "tabSelectorMorocidad";
-            this.tabSelectorMorocidad.Size = new System.Drawing.Size(794, 48);
+            this.tabSelectorMorocidad.Size = new System.Drawing.Size(846, 48);
             this.tabSelectorMorocidad.TabIndex = 5;
             this.tabSelectorMorocidad.Text = "materialTabSelector1";
             // 
@@ -275,7 +295,7 @@ namespace COBRANZA
             this.tabOpcMorosidad.Multiline = true;
             this.tabOpcMorosidad.Name = "tabOpcMorosidad";
             this.tabOpcMorosidad.SelectedIndex = 0;
-            this.tabOpcMorosidad.Size = new System.Drawing.Size(780, 278);
+            this.tabOpcMorosidad.Size = new System.Drawing.Size(832, 290);
             this.tabOpcMorosidad.TabIndex = 4;
             // 
             // tabMorosidadListaMora
@@ -283,7 +303,7 @@ namespace COBRANZA
             this.tabMorosidadListaMora.Location = new System.Drawing.Point(4, 22);
             this.tabMorosidadListaMora.Name = "tabMorosidadListaMora";
             this.tabMorosidadListaMora.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMorosidadListaMora.Size = new System.Drawing.Size(772, 252);
+            this.tabMorosidadListaMora.Size = new System.Drawing.Size(824, 264);
             this.tabMorosidadListaMora.TabIndex = 0;
             this.tabMorosidadListaMora.Text = "Lista Mora";
             this.tabMorosidadListaMora.UseVisualStyleBackColor = true;
@@ -293,7 +313,7 @@ namespace COBRANZA
             this.tabMorosidadPlandePago.Location = new System.Drawing.Point(4, 22);
             this.tabMorosidadPlandePago.Name = "tabMorosidadPlandePago";
             this.tabMorosidadPlandePago.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMorosidadPlandePago.Size = new System.Drawing.Size(772, 252);
+            this.tabMorosidadPlandePago.Size = new System.Drawing.Size(824, 264);
             this.tabMorosidadPlandePago.TabIndex = 1;
             this.tabMorosidadPlandePago.Text = "Plan de Pago";
             this.tabMorosidadPlandePago.UseVisualStyleBackColor = true;
@@ -302,7 +322,7 @@ namespace COBRANZA
             // 
             this.tabMorosidadNotificaciones.Location = new System.Drawing.Point(4, 22);
             this.tabMorosidadNotificaciones.Name = "tabMorosidadNotificaciones";
-            this.tabMorosidadNotificaciones.Size = new System.Drawing.Size(772, 252);
+            this.tabMorosidadNotificaciones.Size = new System.Drawing.Size(824, 264);
             this.tabMorosidadNotificaciones.TabIndex = 2;
             this.tabMorosidadNotificaciones.Text = "Precio";
             this.tabMorosidadNotificaciones.UseVisualStyleBackColor = true;
@@ -311,10 +331,10 @@ namespace COBRANZA
             // 
             this.tabConfiguraciones.Controls.Add(this.tabSelectorConfigraciones);
             this.tabConfiguraciones.Controls.Add(this.tabOpcConfiguraciones);
-            this.tabConfiguraciones.ImageKey = "config.png";
-            this.tabConfiguraciones.Location = new System.Drawing.Point(4, 22);
+            this.tabConfiguraciones.ImageIndex = 0;
+            this.tabConfiguraciones.Location = new System.Drawing.Point(4, 23);
             this.tabConfiguraciones.Name = "tabConfiguraciones";
-            this.tabConfiguraciones.Size = new System.Drawing.Size(786, 333);
+            this.tabConfiguraciones.Size = new System.Drawing.Size(943, 472);
             this.tabConfiguraciones.TabIndex = 3;
             this.tabConfiguraciones.Text = "Configuraciones";
             this.tabConfiguraciones.UseVisualStyleBackColor = true;
@@ -348,7 +368,7 @@ namespace COBRANZA
             this.tabOpcConfiguraciones.Multiline = true;
             this.tabOpcConfiguraciones.Name = "tabOpcConfiguraciones";
             this.tabOpcConfiguraciones.SelectedIndex = 0;
-            this.tabOpcConfiguraciones.Size = new System.Drawing.Size(780, 278);
+            this.tabOpcConfiguraciones.Size = new System.Drawing.Size(780, 277);
             this.tabOpcConfiguraciones.TabIndex = 6;
             // 
             // tabConfiguracionesUsuarios
@@ -356,7 +376,7 @@ namespace COBRANZA
             this.tabConfiguracionesUsuarios.Location = new System.Drawing.Point(4, 22);
             this.tabConfiguracionesUsuarios.Name = "tabConfiguracionesUsuarios";
             this.tabConfiguracionesUsuarios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConfiguracionesUsuarios.Size = new System.Drawing.Size(772, 252);
+            this.tabConfiguracionesUsuarios.Size = new System.Drawing.Size(772, 251);
             this.tabConfiguracionesUsuarios.TabIndex = 0;
             this.tabConfiguracionesUsuarios.Text = "Usuarios";
             this.tabConfiguracionesUsuarios.UseVisualStyleBackColor = true;
@@ -366,7 +386,7 @@ namespace COBRANZA
             this.tabConfiguracionesAccesos.Location = new System.Drawing.Point(4, 22);
             this.tabConfiguracionesAccesos.Name = "tabConfiguracionesAccesos";
             this.tabConfiguracionesAccesos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConfiguracionesAccesos.Size = new System.Drawing.Size(772, 252);
+            this.tabConfiguracionesAccesos.Size = new System.Drawing.Size(772, 251);
             this.tabConfiguracionesAccesos.TabIndex = 1;
             this.tabConfiguracionesAccesos.Text = "Accesos";
             this.tabConfiguracionesAccesos.UseVisualStyleBackColor = true;
@@ -375,7 +395,7 @@ namespace COBRANZA
             // 
             this.tabConfiguracionesModulos.Location = new System.Drawing.Point(4, 22);
             this.tabConfiguracionesModulos.Name = "tabConfiguracionesModulos";
-            this.tabConfiguracionesModulos.Size = new System.Drawing.Size(772, 252);
+            this.tabConfiguracionesModulos.Size = new System.Drawing.Size(772, 251);
             this.tabConfiguracionesModulos.TabIndex = 2;
             this.tabConfiguracionesModulos.Text = "Modulos";
             this.tabConfiguracionesModulos.UseVisualStyleBackColor = true;
@@ -384,23 +404,33 @@ namespace COBRANZA
             // 
             this.tabConfiguracionesParametros.Location = new System.Drawing.Point(4, 22);
             this.tabConfiguracionesParametros.Name = "tabConfiguracionesParametros";
-            this.tabConfiguracionesParametros.Size = new System.Drawing.Size(772, 252);
+            this.tabConfiguracionesParametros.Size = new System.Drawing.Size(772, 251);
             this.tabConfiguracionesParametros.TabIndex = 3;
             this.tabConfiguracionesParametros.Text = "Parametros";
             this.tabConfiguracionesParametros.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // imglistmenuprincipal
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.imglistmenuprincipal.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglistmenuprincipal.ImageStream")));
+            this.imglistmenuprincipal.TransparentColor = System.Drawing.Color.Transparent;
+            this.imglistmenuprincipal.Images.SetKeyName(0, "config.png");
+            this.imglistmenuprincipal.Images.SetKeyName(1, "Monitor.png");
+            this.imglistmenuprincipal.Images.SetKeyName(2, "mora.png");
+            this.imglistmenuprincipal.Images.SetKeyName(3, "services.png");
+            this.imglistmenuprincipal.Images.SetKeyName(4, "User.png");
+            // 
+            // mnustripmenuprincipal
+            // 
+            this.mnustripmenuprincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.serviciosToolStripMenuItem,
             this.morosidadToolStripMenuItem,
             this.configuracionesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 64);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(899, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnustripmenuprincipal.Location = new System.Drawing.Point(3, 64);
+            this.mnustripmenuprincipal.Name = "mnustripmenuprincipal";
+            this.mnustripmenuprincipal.Size = new System.Drawing.Size(951, 24);
+            this.mnustripmenuprincipal.TabIndex = 1;
+            this.mnustripmenuprincipal.Text = "menuStrip1";
             // 
             // clientesToolStripMenuItem
             // 
@@ -518,26 +548,28 @@ namespace COBRANZA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 577);
+            this.ClientSize = new System.Drawing.Size(957, 590);
             this.Controls.Add(this.tabmenuprincipal);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.mnustripmenuprincipal);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.tabmenuprincipal;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mnustripmenuprincipal;
             this.Name = "frmprincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.frmprincipal_Load);
             this.tabmenuprincipal.ResumeLayout(false);
             this.tabClientes.ResumeLayout(false);
             this.tabOpcClientes.ResumeLayout(false);
+            this.tabClientesRegistro.ResumeLayout(false);
             this.tabServicios.ResumeLayout(false);
             this.tabOpcServicios.ResumeLayout(false);
             this.tabMorosidad.ResumeLayout(false);
             this.tabOpcMorosidad.ResumeLayout(false);
             this.tabConfiguraciones.ResumeLayout(false);
             this.tabOpcConfiguraciones.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnustripmenuprincipal.ResumeLayout(false);
+            this.mnustripmenuprincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,7 +602,7 @@ namespace COBRANZA
         private System.Windows.Forms.TabPage tabConfiguracionesAccesos;
         private System.Windows.Forms.TabPage tabConfiguracionesModulos;
         private System.Windows.Forms.TabPage tabConfiguracionesParametros;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mnustripmenuprincipal;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
@@ -587,6 +619,8 @@ namespace COBRANZA
         private System.Windows.Forms.ToolStripMenuItem accesosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
+        private System.Windows.Forms.ImageList imglistmenuprincipal;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
     }
 }
 
